@@ -12,24 +12,14 @@ import threading
 def eating(nr, forks):
     print("Start")
 
-    #if ((nr + 1) % 5 > nr):
     forks[nr % 5].acquire()
     time.sleep(5)
     forks[(nr + 1) % 5].acquire()
 
-    # else:
-    #     forks[(nr + 1) % 5].acquire()
-    #     time.sleep(5)
-    #     forks[nr % 5].acquire()
-
     print("Eat")
 
-  #  if ((nr + 1) % 5 > nr):
     forks[(nr + 1) % 5].release()
     forks[nr % 5].release()
-    # else:
-    #     forks[nr % 5].release()
-    #     forks[(nr + 1) % 5].release()
 
     print("End")
 
