@@ -12,9 +12,9 @@ def saveAsPNG(path):
     image = Image.open(pathJPG)
     image.save(pathPNG)
 
-path = os.getcwd()  # path to the current directory contains scripts
+
+path = os.getcwd()  # path to the current directory which contains scripts
 
 nameOfImage = 'jowisz'
 path = os.path.join(path, nameOfImage)
-
 saveAsPNG(path)

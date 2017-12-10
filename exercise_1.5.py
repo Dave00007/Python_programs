@@ -7,8 +7,8 @@ import os
 def displayContentsOfFolder(path):
     listOfFiles = os.listdir(path)
 
-    for i in listOfFiles:
-        internalPath = os.path.join(path, i)
+    for name in listOfFiles:
+        internalPath = os.path.join(path, name)
 
         if os.path.isdir(internalPath):
             displayContentsOfFolder(internalPath)
@@ -16,5 +16,5 @@ def displayContentsOfFolder(path):
             print(internalPath)
 
 
-path = os.getcwd()  # path to the current directory contains scripts
+path = os.getcwd()  # path to the current directory which contains scripts
 displayContentsOfFolder(path)

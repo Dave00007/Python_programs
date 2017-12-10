@@ -17,7 +17,7 @@ def swap(t1, t2):
     return t2, t1
 
 
-def sortingDescending(randomNumbers):
+def sortDescending(randomNumbers):
     for j in range(N - 1):
         for i in range(N - 1):
             if randomNumbers[i] < randomNumbers[i + 1]:
@@ -30,6 +30,6 @@ randomNumbers = createRandomNumbers(N)
 print(randomNumbers)
 print(sorted(randomNumbers, reverse=True))
 
-sortedNumbers = sortingDescending(randomNumbers)
+sortedNumbers = sortDescending(randomNumbers)
 print(sortedNumbers)
 

@@ -2,13 +2,18 @@
 Napisz skrypt realizujacy mnozenie dwóch macierzy o rozmiarach 8x8
 '''
 import random
+import numpy
 
 
 def generateMatrix(matrixSize):
     matrix = [[random.randint(0,9)for i in range(matrixSize)] for j in range(matrixSize)]
     return matrix
 
-def multiplicationMatrices(matrix1,matrix2):
+def multiplicationMatrices(matrix1, matrix2):
+    if numpy.shape(matrix1)[0] != numpy.shape(matrix2)[1]:
+        print("Wrong size of matrices.")
+        return
+
     sizeOfMatrix = len(matrix1)
     matrix = [[0 for i in range(sizeOfMatrix)] for j in range(sizeOfMatrix)]
 

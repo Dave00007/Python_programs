@@ -10,5 +10,5 @@ def numberOfFiles(path):
     print("Number of files: " + str(numberOfFiles))
 
 
-path = os.getcwd()  # path to the current directory contains scripts
+path = os.getcwd()  # path to the current directory which contains scripts
 numberOfFiles(path)

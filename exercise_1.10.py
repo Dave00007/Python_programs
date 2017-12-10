@@ -31,7 +31,7 @@ def replaceWords(path):
         file.close()
 
 
-path = os.getcwd()  # path to the current directory contains scripts
+path = os.getcwd()  # path to the current directory which contains scripts
 nameOfFile = 'text_1.txt'
 path = os.path.join(path, nameOfFile)
 
